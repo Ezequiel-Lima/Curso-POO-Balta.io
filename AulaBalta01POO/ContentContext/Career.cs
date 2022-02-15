@@ -8,5 +8,6 @@ namespace AulaBalta01POO.ContentContext
 {
     internal class Career : Content 
     {
+        public int Courses { get; set; }
     }
 }

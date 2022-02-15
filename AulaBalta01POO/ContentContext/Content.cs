@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace AulaBalta01POO.ContentContext
 {
-    internal class Content
+    internal abstract class Content
     {
-        public int Id { get; set; }
+        public Content()
+        {
+            Id = Guid.NewGuid(); //SPOF Ponto Unico de Falha
+        }
+
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
     }
