@@ -45,8 +45,12 @@
   <ItemGroup>
     <Compile Include="ContentContext\Article.cs" />
     <Compile Include="ContentContext\Career.cs" />
+    <Compile Include="ContentContext\CareerItem.cs" />
     <Compile Include="ContentContext\Content.cs" />
     <Compile Include="ContentContext\Course.cs" />
+    <Compile Include="ContentContext\Enums\EContentLevel.cs" />
+    <Compile Include="ContentContext\Lecture.cs" />
+    <Compile Include="ContentContext\Module.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

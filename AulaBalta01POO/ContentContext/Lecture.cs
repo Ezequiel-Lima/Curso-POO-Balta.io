@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 
 namespace AulaBalta01POO.ContentContext
 {
-    internal class Course : Content
+    public class Lecture 
     {
-        public Course(string title, string url) : base(title, url) 
+        public Lecture()
         {
-            //sempre iniciar a lista no construtor
-            Modules = new List<Module>();        
         }
 
-        public string Tag { get; set; }
-        public IList<Module> Modules { get; set; }
+        public int Ordem { get; set; }
+        public string Title { get; set; }
         public int DurationInMinutes { get; set; }
         public EContentLevel Level { get; set; }
-    }  
+    }
 }

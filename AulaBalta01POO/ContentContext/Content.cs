@@ -8,9 +8,11 @@ namespace AulaBalta01POO.ContentContext
 {
     internal abstract class Content
     {
-        public Content()
+        public Content(string title, string url)
         {
             Id = Guid.NewGuid(); //SPOF Ponto Unico de Falha
+            Title = title;
+            Url = url;
         }
 
         public Guid Id { get; set; }
