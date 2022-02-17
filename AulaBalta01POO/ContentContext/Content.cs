@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AulaBalta01POO.ContentContext
 {
-    internal abstract class Content
+    internal abstract class Content : Base
     {
         public Content(string title, string url)
         {
-            Id = Guid.NewGuid(); //SPOF Ponto Unico de Falha
             Title = title;
             Url = url;
         }

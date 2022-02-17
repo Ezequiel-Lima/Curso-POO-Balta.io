@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentContext\Article.cs" />
+    <Compile Include="ContentContext\Base.cs" />
     <Compile Include="ContentContext\Career.cs" />
     <Compile Include="ContentContext\CareerItem.cs" />
     <Compile Include="ContentContext\Content.cs" />
@@ -51,11 +52,20 @@
     <Compile Include="ContentContext\Enums\EContentLevel.cs" />
     <Compile Include="ContentContext\Lecture.cs" />
     <Compile Include="ContentContext\Module.cs" />
+    <Compile Include="NotificationContext\Notifiable.cs" />
+    <Compile Include="NotificationContext\Notification.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubscriptionContext\PagarMeSubscription.cs" />
+    <Compile Include="SubscriptionContext\PayPalSubscription.cs" />
+    <Compile Include="SubscriptionContext\Plan.cs" />
+    <Compile Include="SubscriptionContext\Student.cs" />
+    <Compile Include="SubscriptionContext\Subscription.cs" />
+    <Compile Include="SubscriptionContext\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

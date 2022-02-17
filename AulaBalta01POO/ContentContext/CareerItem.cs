@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AulaBalta01POO.NotificationContext;
 
 namespace AulaBalta01POO.ContentContext
 {
-    internal class CareerItem
+    internal class CareerItem : Base
     {
         public CareerItem(
             int order, 
@@ -14,6 +10,9 @@ namespace AulaBalta01POO.ContentContext
             string description, 
             Course course)
         {
+            if (course == null)
+                AddNotification(new Notification("Course", "Curso inválido"));
+            
             Order = order;
             Title = title;
             Description = description;

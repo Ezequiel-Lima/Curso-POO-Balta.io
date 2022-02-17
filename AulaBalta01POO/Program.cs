@@ -1,9 +1,8 @@
 ﻿using AulaBalta01POO.ContentContext;
+using AulaBalta01POO.SubscriptionContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AulaBalta01POO
 {
@@ -33,8 +32,8 @@ namespace AulaBalta01POO
 
             var careers = new List<Career>();
             var career = new Career("Especialista . NET", "especialista-dotnet");
-            var careerItem = new CareerItem(1, "Comece por aqui", "", null);
-            var careerItem2 = new CareerItem(2, "Aprenda .Net", "", null);
+            var careerItem = new CareerItem(1, "Comece por aqui", "", courseCsharp);
+            var careerItem2 = new CareerItem(2, "Aprenda .Net", "", courseAspNet);
             var careerItem3 = new CareerItem(3, "OOP", "", null);
             career.Items.Add(careerItem2);
             career.Items.Add(careerItem3);
@@ -47,8 +46,19 @@ namespace AulaBalta01POO
                 foreach (var itemx in career.Items.OrderBy(x => x.Order))
                 {
                     Console.WriteLine(itemx.Order + " - " + itemx.Title);
+                    Console.WriteLine(itemx.Course?.Title);
+                    Console.WriteLine(itemx.Course?.Level);
+
+                    foreach (var notification in itemx.Notifications)
+                    {
+                        Console.WriteLine($"{notification.Property} - {notification.Message}");
+                    }
                 }
             }
+
+            var payPalSubscription = new PayPalSubscription();
+            var student = new Student();
+            student.Subscriptions.Add(payPalSubscription);
 
             Console.ReadKey();
         }
